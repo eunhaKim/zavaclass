@@ -55,8 +55,8 @@
                     </div>
                     <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                         <a href="" class="btn px-0">
-                            <i class="fas fa-heart text-primary"></i>
-                            <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                            <i class="fas fa-heart text-primary"></i> <span class="badge text-secondary" style="padding-bottom: 2px;">총방문수 : 31</span> | 
+                            <i class="fa-regular fa-heart text-primary ml-2"></i> <span class="badge text-secondary" style="padding-bottom: 2px;">오늘방문수 : 3</span>
                         </a>
                         <!-- <a href="" class="btn px-0 ml-3">
                             <i class="fas fa-shopping-cart text-primary"></i>

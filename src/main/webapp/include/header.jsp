@@ -23,7 +23,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                     	<c:if test="${level > 4}">
                         <button class="dropdown-item" type="button" onclick="location.href='MemberLogin.mem'">로그인</button>
-                        <button class="dropdown-item" type="button">회원가입</button>
+                        <button class="dropdown-item" type="button" onclick="location.href='MemberJoin.mem'">회원가입</button>
                       </c:if>
                       <c:if test="${level <= 4}">
                       	<button class="dropdown-item" type="button">로그아웃</button>

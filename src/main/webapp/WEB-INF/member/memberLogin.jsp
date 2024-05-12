@@ -47,32 +47,35 @@
           <div class="col-lg-6 mb-5">
               <div class="contact-form bg-light p-30">
                   <div id="success"></div>
-                  <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                  <form name="myform" id="myform method="postonclick="location.href='MemberLogin.mem'"" action="MemberLoginOk.mem" novalidate="novalidate">
                       <div class="control-group">
-                          <input type="text" class="form-control" id="mid" value="${mid}"
+                          <input type="text" class="form-control" id="mid"  placeholder="Your Id" value="${mid}"
                               required="required" data-validation-required-message="Please enter your id" />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
-                          <input type="password" class="form-control" id="pwd" 
+                          <input type="password" class="form-control" id="pwd"  placeholder="Your Password"
                               required="required" data-validation-required-message="Please enter your password" />
                           <p class="help-block text-danger"></p>
                       </div>
                       
                       <div>
-                          <input type="checkbox" name="idSave" checked /> 아이디 저장
+                          <div class="custom-control custom-switch">
+	                          <input type="checkbox" name="idSave"  id="switch1" class="custom-control-input" checked />
+	                          <label class="custom-control-label" for="switch1">아이디 저장</label>
+	                        </div> 
                           <button class="btn btn-primary py-2 px-4 mt-2 form-control" type="submit" id="sendMessageButton">로그인</button>
                       </div>
                   </form>
               </div>
               <div class="bg-light mt-3  p-30">
-                  <i class="fa-solid fa-user text-primary mr-3"></i>회원가입 
+                  <a href="MemberJoin.mem"><i class="fa-solid fa-user text-primary mr-3"></i>회원가입</a> 
                   <i class="fa-solid fa-magnifying-glass text-primary mr-3 ml-3"></i>아이디 / 패스워드 찾기
               </div>
           </div>
           <div class="col-lg-6 mb-5">
               <div class="bg-light p-30 mb-30">
-                  영화광고
+                  네이버 카카오톡 구글 로그인...
               </div>
           </div>
       </div>

@@ -28,19 +28,19 @@ public class MemberController extends HttpServlet {
 		if(com.equals("/MemberLogin")) {
 			viewPage += "/memberLogin.jsp";
 		}
-//		else if(com.equals("/MemberLoginOk")) {
-//			command = new MemberLoginOkCommand();
-//			command.execute(request, response);
-//			viewPage = "/include/message.jsp";
-//		}
+		else if(com.equals("/MemberLoginOk")) {
+			command = new MemberLoginOkCommand();
+			command.execute(request, response);
+			viewPage = "/include/message.jsp";
+		}
 //		else if(com.equals("/MemberLogout")) {
 //			command = new MemberLogoutCommand();
 //			command.execute(request, response);
 //			viewPage = "/include/message.jsp";
 //		}
-//		else if(com.equals("/MemberJoin")) {
-//			viewPage += "/memberJoin.jsp";
-//		}
+		else if(com.equals("/MemberJoin")) {
+			viewPage += "/memberJoin.jsp";
+		}
 //		else if(com.equals("/MemberJoinOk")) {
 //			command = new MemberJoinOkCommand();
 //			command.execute(request, response);
@@ -56,11 +56,11 @@ public class MemberController extends HttpServlet {
 //			command.execute(request, response);
 //			return;
 //		}
-//		else if(level > 4) {
-//			request.setAttribute("message", "로그인후 사용하세요");
-//			request.setAttribute("url", request.getContextPath()+"/MemberLogin.mem");
-//			viewPage = "/include/message.jsp";
-//		}
+		else if(level > 4) {
+			request.setAttribute("message", "로그인후 사용하세요");
+			request.setAttribute("url", request.getContextPath()+"/MemberLogin.mem");
+			viewPage = "/include/message.jsp";
+		}
 //		else if(com.equals("/MemberMain")) {
 //			command = new MemberMainCommand();
 //			command.execute(request, response);
