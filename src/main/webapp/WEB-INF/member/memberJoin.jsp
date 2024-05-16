@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>memberLogin.jsp</title>
+	<title>memberJoin.jsp</title>
 	<%@ include file = "/include/bs4.jsp" %>
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script src="${ctp}/js/woo.js"></script>
@@ -179,6 +179,7 @@
 	        <div class="col-12">
 	            <nav class="breadcrumb bg-light mb-30">
 	                <a class="breadcrumb-item text-dark" href="${ctp}/Main">Home</a>
+	                <a class="breadcrumb-item text-dark">My Account</a>
 	                <span class="breadcrumb-item active">회원가입</span>
 	            </nav>
 	        </div>
@@ -228,7 +229,7 @@
 								    <div class="form-group">
 								        <label for="gender" class="mb-0">성별 :</label>
 								        <div class="custom-control custom-radio custom-control-inline ml-3">
-											    <input type="radio" class="custom-control-input" id="gender1" name="gender" value="남자">
+											    <input type="radio" class="custom-control-input" id="gender1" name="gender" value="남자" checked>
 											    <label class="custom-control-label" for="gender1">남자</label>
 											  </div>
 											  <div class="custom-control custom-radio custom-control-inline">

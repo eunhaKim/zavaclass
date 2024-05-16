@@ -30,7 +30,7 @@ public class MemberLoginOkCommand implements MemberInterface {
 			return;
 		}
 		
-		// 저장된 비밀번호에서 salt키를 분리시켜서 다시 암호화 시킨후 맞는지 비교처리한다.
+  	// 저장된 비밀번호에서 salt키를 분리시켜서 다시 암호화 시킨후 맞는지 비교처리한다.
 		String salt = vo.getPwd().substring(0,8);
 		
 		SecurityUtil security = new SecurityUtil();
@@ -41,7 +41,7 @@ public class MemberLoginOkCommand implements MemberInterface {
 			request.setAttribute("url", "MemberLogin.mem");
 			return;
 		}
-		
+
 		// 로그인 체크 완료후에 처리할 내용....(쿠키/세션/...)
 		// 회원일때 처리할 부분
 		// 1.방문포인트지급:매번 10포인트씩지급, 단 1일 최대 50포인트까지만 지급
@@ -63,8 +63,7 @@ public class MemberLoginOkCommand implements MemberInterface {
 			// 오늘 다시 방문한경우(오늘 방문카운트는 오늘방문카운트 + 1, 포인트증가는? 오늘 방문횟수가 5회전까지라면 기존포인트에 +10을 한다.)
 			vo.setTodayCnt(vo.getTodayCnt() + 1);
 			if(vo.getTodayCnt() <= 5) vo.setPoint(vo.getPoint() + 10);
-		}
-		
+		}		
 		
 		// 2-2. 자동 정회원 등업시키기
 		// 조건: 방명록에 5회이상 글을 올렸을시 '준회원'에서 '정회원'으로 자동 등업처리한다.(단, 방명록의 글은 1일 여러번 등록해도 1회로 처리한다) 
@@ -102,8 +101,6 @@ public class MemberLoginOkCommand implements MemberInterface {
 		
 		request.setAttribute("message", mid+"님 로그인 되셨습니다.");
 		request.setAttribute("url", request.getContextPath()+"/Main");
-		
-		
-		
 	}
+
 }

@@ -1,26 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="ctp" value="${pageContext.request.contextPath}" />
-<%
-	// 로그인창에 아이디 체크 유무에 대한 처리
-	// 쿠키를 검색해서 cMid가 있을때 가져와서 아이디입력창에 뿌릴수 있게 한다.
-	Cookie[] cookies = request.getCookies();
 
-	if(cookies != null) {
-		for(int i=0; i<cookies.length; i++) {
-			if(cookies[i].getName().equals("cMid")) {
-				pageContext.setAttribute("mid", cookies[i].getValue());
-				break;
-			}
-		}
-	}
-%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>memberLogin.jsp</title>
+	<title>memberMain.jsp</title>
 	<%@ include file = "/include/bs4.jsp" %>
 </head>
 <body>
@@ -34,7 +21,7 @@
 	            <nav class="breadcrumb bg-light mb-30">
 	                <a class="breadcrumb-item text-dark" href="${ctp}/Main">Home</a>
 	                <a class="breadcrumb-item text-dark">My Account</a>
-	                <span class="breadcrumb-item active">로그인</span>
+	                <span class="breadcrumb-item active">회원정보</span>
 	            </nav>
 	        </div>
 	    </div>
@@ -43,7 +30,7 @@
 	
 	<!-- Contact Start -->
   <div class="container-fluid">
-      <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Login</span></h2>
+      <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">회원정보</span></h2>
       <div class="row px-xl-5">
           <div class="col-lg-6 mb-5">
               <div class="contact-form bg-light p-30">
