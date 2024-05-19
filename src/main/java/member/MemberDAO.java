@@ -175,7 +175,7 @@ public class MemberDAO {
 	public ArrayList<MemberVO> getMemberList() {
 		ArrayList<MemberVO> vos = new ArrayList<MemberVO>();
 		try {
-			sql = "select * from member order by idx";
+			sql = "select * from member order by idx desc";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			

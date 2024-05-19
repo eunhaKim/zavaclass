@@ -1,27 +1,23 @@
 package guest;
 
-import java.io.IOException;import java.security.AlgorithmParameterGeneratorSpi;
+import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-@WebServlet("/GuestList")
-public class GuestList extends HttpServlet {
+public class GuestListCommand implements GuestInterface {
+
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		GuestDAO dao = new GuestDAO();
 		
 		// 1. 현재 페이지번호를 구해온다.
 		int pag = request.getParameter("pag")==null ? 1 : Integer.parseInt(request.getParameter("pag"));
 		
 		// 2. 한페이지의 분량을 구한다.
-		int pageSize = request.getParameter("pageSize")==null ? 5 : Integer.parseInt(request.getParameter("pageSize"));
+		int pageSize = request.getParameter("pageSize")==null ? 12 : Integer.parseInt(request.getParameter("pageSize"));
 		
 		// 3. 총 레코드 건수를 구한다.(sql명령어중 count함수 이용)
 		int totRecCnt = dao.getTotRecCnt();
@@ -61,9 +57,5 @@ public class GuestList extends HttpServlet {
 		request.setAttribute("curBlock", curBlock);
 		request.setAttribute("lastBlock", lastBlock);
 		request.setAttribute("vos", vos);
-		
-		String viewPage = "/guest/guestList.jsp";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
-		dispatcher.forward(request, response);
 	}
 }

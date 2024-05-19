@@ -53,7 +53,7 @@
       <form name="myform" method="post" action="MemberDeleteCheckOk.mem">
 	      <div class="row px-xl-5">
 	          <div class="col-lg-6 mb-5">
-	              <div class="contact-form bg-light p-30">
+	              <div class="bg-light p-30">
 							      <p><i class="fa-solid fa-comment-dots text-primary"></i> 회원 탈퇴를 하기위해 현재 비밀번호를 확인합니다.</p>
 	                  <input type="password" name="pwd" id="pwd" class="form-control" autofocus required />
 	              </div>

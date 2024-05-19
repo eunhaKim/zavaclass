@@ -33,8 +33,8 @@
         <div class="col-lg-9">
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
                 <a href="" class="text-decoration-none d-block d-lg-none">
-                    <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
-                    <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
+                    <span class="h1 text-uppercase text-dark bg-light px-2">Movie</span>
+                    <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Review</span>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,8 @@
                             </div>
                         </div>
                         <a href="shop.html" class="nav-item nav-link">Shop</a>
-                        <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="GuestList.gu" class="nav-item nav-link">방명록</a>
                         <div class="nav-item dropdown">
 	                        <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">My Account <i class="fa fa-angle-down mt-1"></i></a>
 	                        <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -60,11 +60,13 @@
 	                            <a href="MemberJoin.mem" class="dropdown-item">회원가입</a>
 	                          </c:if>
 	                          <c:if test="${level <= 4}">
-	                            <a href="MemberLogout.mem" class="dropdown-item">로그아웃</a>
+	                            <a href="MemberMain.mem" class="dropdown-item">회원정보</a>
 			                      	<a href="MemberPwdCheck.mem" class="dropdown-item">회원정보수정</a>
+	                            <a href="MemberLogout.mem" class="dropdown-item">로그아웃</a>
 			                      	<a href="MemberDelete.mem" class="dropdown-item">회원탈퇴</a>
 	                          </c:if>
 	                          <c:if test="${level == 0}">
+	                          	<hr/>
 	                          	<a href="MemberList.mem" class="dropdown-item">회원리스트</a>
 	                    				<a href="AdminMain.ad" class="dropdown-item">관리자메뉴</a>
 	                          </c:if>

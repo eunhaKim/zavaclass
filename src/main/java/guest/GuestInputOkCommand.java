@@ -4,24 +4,23 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-@WebServlet("/GuestInputOk")
-public class GuestInputOk extends HttpServlet {
+public class GuestInputOkCommand implements GuestInterface {
+
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name")==null ? "" : request.getParameter("name");
 		String email = request.getParameter("email")==null ? "" : request.getParameter("email");
 		String homePage = request.getParameter("homePage")==null ? "" : request.getParameter("homePage");
 		String content = request.getParameter("content")==null ? "" : request.getParameter("content");
 		String hostIp = request.getParameter("hostIp")==null ? "" : request.getParameter("hostIp");
 		
-		name = name.replace("<", "&lt;");
-		name = name.replace(">", "&gt;");
+		name = name.replace("<", "&lt;").replace(">", "&gt;");
+		email = email.replace("<", "&lt;").replace(">", "&gt;");
+		homePage = homePage.replace("<", "&lt;").replace(">", "&gt;");
+		content = content.replace("<", "&lt;").replace(">", "&gt;");
 		
 		GuestVO vo = new GuestVO();
 		
@@ -38,16 +37,13 @@ public class GuestInputOk extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if(res != 0) {
-			out.println("<script>");
-			out.println("alert('방명록에 글이 등록되었습니다.');");
-			out.println("location.href='"+request.getContextPath()+"/GuestList';");
-			out.println("</script>");
+			request.setAttribute("message", "방명록에 글이 등록되었습니다.");
+			request.setAttribute("url", "GuestList.gu");
 		}
 		else {
-			out.println("<script>");
-			out.println("alert('방명록 글 등록 실패~~');");
-			out.println("location.href='"+request.getContextPath()+"/guest/guestInput.jsp';");
-			out.println("</script>");
+			request.setAttribute("message", "방명록에 글등록 실패ㅜㅜ");
+			request.setAttribute("url", "GuestInput.gu");
 		}
 	}
+
 }

@@ -16,8 +16,7 @@ public class MemberMainCommand implements MemberInterface {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		
-		String mid = (String) session.getAttribute("sMid");
+		String mid = request.getParameter("mid")==null ? (String) session.getAttribute("sMid") : request.getParameter("mid");
 		
 		MemberDAO mDao = new MemberDAO();
 		MemberVO mVo = mDao.getMemberIdCheck(mid);

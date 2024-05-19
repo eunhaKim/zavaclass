@@ -139,7 +139,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">회원정보수정</span></h2>
     <div class="row px-xl-5">
       <div class="col-lg-6 mb-5">
-        <div class="contact-form bg-light p-30">
+        <div class="bg-light p-30">
           <form name="myform" method="post" action="${ctp}/MemberUpdateOk.mem" class="was-validated">
 				    <h2>회원정보수정</h2>
 				    <br/>

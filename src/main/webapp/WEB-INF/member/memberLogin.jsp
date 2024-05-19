@@ -46,7 +46,7 @@
       <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Login</span></h2>
       <div class="row px-xl-5">
           <div class="col-lg-6 mb-5">
-              <div class="contact-form bg-light p-30">
+              <div class="bg-light p-30">
                   <div id="success"></div>
                   <form name="myform" id="myform method="post" action="MemberLoginOk.mem" novalidate="novalidate">
                       <div class="control-group">
@@ -56,7 +56,7 @@
                       </div>
                       <div class="control-group">
                           <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Your Password"
-                              required="required" data-validation-required-message="Please enter your password" />
+                              value="1234" required="required" data-validation-required-message="Please enter your password" />
                           <p class="help-block text-danger"></p>
                       </div>
                       

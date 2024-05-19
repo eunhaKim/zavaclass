@@ -82,7 +82,7 @@
 	      <div class="row px-xl-5">
           <div class="col-lg-6 mb-5">
 			      <form name="myform" method="post" action="MemberPwdCheckOk.mem">
-	            <div class="contact-form bg-light p-30">
+	            <div class="bg-light p-30">
 						    <p><i class="fa-solid fa-comment-dots text-primary"></i> 회원정보수정을 하기위해 현재 비밀번호를 확인합니다.</p>
 	              <input type="password" name="pwd" id="pwd" class="form-control mb-3" autofocus required />
 	              <input type="button" value="비밀번호변경" onclick="pwdReCheck()" class="btn btn-primary mr-2"/>
