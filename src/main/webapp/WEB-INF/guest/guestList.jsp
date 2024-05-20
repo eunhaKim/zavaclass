@@ -37,7 +37,9 @@
       <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">방명록리스트</span></h2>
       
       <div class="row mx-xl-5 mb-4">
-          <a href="GuestInput.gu" class="btn btn-primary ml-auto">방명록 글쓰기</a> 
+          <div class="col-12 text-right">
+          	<a href="GuestInput.gu" class="btn btn-primary">방명록 글쓰기</a>
+          </div> 
       </div>
       
       <div class="row px-xl-5">
